@@ -10,7 +10,7 @@ const app = express();
 const port = 3000;
 
 const openai = new OpenAI({
-    apiKey: "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"
+    apiKey: "custom api key"
 })
 
 app.use(cors());
@@ -27,7 +27,7 @@ app.post('/generate-hero', async (req, res) => {
             size: '1024x1024'
         }, {
             headers: {
-                'Authorization': `Bearer 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`
+                'Authorization': `Bearer custom api key`
             }
         });
         const imageUrl = response.data[0].url;
